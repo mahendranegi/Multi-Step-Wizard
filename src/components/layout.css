@@ -41,6 +41,7 @@ body{
         border-radius: 4px;
     }
 }
+.stepSection aside span{display: flex;}
 .stepSection button:disabled {
         background-color: #bfbfbf;
     color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
