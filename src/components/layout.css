@@ -1,0 +1,85 @@
+body{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 16px;
+}
+.stepSection aside{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    & span{
+        background: gray;
+        color: #ccc;
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    & .active{
+        background: blueviolet;
+        color: #fff;
+    }
+    & button{
+        background: blueviolet;
+        border: 1px solid blueviolet;
+        padding: 12px;
+        cursor: pointer;
+        color: #fff;
+        font-weight: 600;
+        text-transform: capitalize;
+        min-width: 100px;
+        border-radius: 4px;
+    }
+}
+.stepSection button:disabled {
+        background-color: #bfbfbf;
+    color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+    cursor: not-allowed;
+    border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
+}
+.stepSection{
+    width: 600px;
+    margin: 24px auto 0;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: #fff;
+    padding: 36px;
+    border-radius: 12px;
+    & h1{
+        text-align: center;
+        padding: 36px 0;
+    }
+    & .material-icons{
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        font-size: 28px;
+        cursor: pointer;
+        transition: 200ms;
+        color: #333;
+        &:hover{
+            color: #212121;
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px){
+.stepSection{
+    width: 100%;
+    padding: 12px;
+}
+.stepSection .material-icons{
+            right: -20px;
+        top: -20px;
+    }
+}
